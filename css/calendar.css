@@ -1,0 +1,24 @@
+table, th, td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+	text-align: center;
+}
+
+i {
+	color: blue;
+}
+
+i:hover {
+	color: red;
+}
+table th {
+	width: 14.28%;
+}
+
+.currentMonth {
+	color: blue;
+}
+
+.otherMonth {
+	color: gray;
+}
