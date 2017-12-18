@@ -22,26 +22,28 @@
         <!-- Add your site or application content here -->
         <div class="grid">
 			<div id='calendar'>
-				<table id="calContents">
-					<tr>
-						<th><i class="fa fa-chevron-left" aria-hidden="true"></i></th>
-						<th id="displayDate" colspan="5">Date</th>
-						<th><i class="fa fa-chevron-right" aria-hidden="true"></i></th>
-					</tr>
-					<tr>
-						<th>Sun</th>
-						<th>Mon</th>
-						<th>Tue</th>
-						<th>Wed</th>
-						<th>Thu</th>
-						<th>Fri</th>
-						<th>Sat</th>
-					</tr>
-					
+				<table id="calendarTable">
+                    <thead>
+    					<tr>
+    						<th class="calNav" id="calNavBack"><i class="fa fa-chevron-left" aria-hidden="true"></i></th>
+    						<th id="displayDate" colspan="5">Date</th>
+    						<th class="calNav" id="calNavForw"><i class="fa fa-chevron-right" aria-hidden="true"></i></th>
+    					</tr>
+    					<tr>
+    						<th>Sun</th>
+    						<th>Mon</th>
+    						<th>Tue</th>
+    						<th>Wed</th>
+    						<th>Thu</th>
+    						<th>Fri</th>
+    						<th>Sat</th>
+    					</tr>
+                    </thead>
+					<tbody id="calContents">               
+                    </tbody>
 				</table>
 			</div>
 		</div>
-
         <script src="js/calendar.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
@@ -52,3 +54,4 @@
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
     </body>
 </html>
+
