@@ -4,21 +4,28 @@ table, th, td {
 	text-align: center;
 }
 
-i {
+.calNav:hover {
 	color: blue;
 }
 
-i:hover {
-	color: red;
+.calNav {
+	color: royalblue;
+	cursor: pointer;
 }
+
 table th {
 	width: 14.28%;
 }
 
 .currentMonth {
-	color: blue;
+	color: royalblue;
 }
 
 .otherMonth {
 	color: gray;
+}
+
+.currentDay {
+	color: blue;
+	font-weight: bolder;
 }
