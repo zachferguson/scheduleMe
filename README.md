@@ -1,2 +1,2 @@
 # scheduleMe
-A web app that lets you schedule time with someone, and see who's scheduled time with you.
+A simple calendar to build on for future scheduling, and date based apps.
