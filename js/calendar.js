@@ -106,13 +106,15 @@ function populateCalandarDates () {
 	// fill the tempArr starting from last month till next month to fill the first calendar week
 	while (true) {
 		let weekArr = [];
+		// if the first of the month is not == to 0 / does not fall on the first of the month
 		if (first != 0) {
 			for (let c = prevMonthData.length - first; c < prevMonthData.length; c++) {
 				weekArr.push(prevMonthData[c]);
 			}	
 		}
 		if (weekArr.length != 7) {
-			for (let c = 0; c < 8 - weekArr.length; c++) {
+			let arrLength = 7 - weekArr.length;
+			for (let c = 0; c < arrLength; c++) {
 				weekArr.push(calMonth[c]);
 				curMonthStart = c;
 			}
@@ -145,6 +147,7 @@ function populateCalandarDates () {
 			
 			if (weekArr.length == 7) {
 				tempArr.push(weekArr);
+				console.log(weekArr);
 				counter += 7;
 				continue;
 			}
@@ -152,7 +155,7 @@ function populateCalandarDates () {
 		if (counter <= calMonth.length) {
 			continue;
 		}
-		break;
+		return;
 	}
 }
 
@@ -161,7 +164,6 @@ function tableify () {
 	publishes the week array created by the populateCalendarDates function, applies the correct classes to display the dates
 	*/
 	while (document.getElementById(docTable).firstChild) document.getElementById(docTable).removeChild(document.getElementById(docTable).firstChild);
-	//document.getElementById(docTable).innerHTML += "";
 	for (let c = 0; c < dateTable.length; c++) {
 		let tempRow = "<tr>";
 		for (let t = 0; t < dateTable[c].length; t++) {
